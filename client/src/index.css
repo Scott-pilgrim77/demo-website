@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --fantasy-deep-blue: #0a1628;
+    --fantasy-blue: #1a2f5a;
+    --fantasy-violet: #4a1a6b;
+    --fantasy-crimson: #8b1a1a;
+    --fantasy-gold: #d4a574;
+    --fantasy-bright-gold: #ffd700;
+    --fantasy-cyan: #00d4ff;
+    --fantasy-purple-glow: #a855f7;
+    --fantasy-orange: #ff6b35;
+    
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: linear-gradient(180deg, var(--fantasy-deep-blue) 0%, var(--fantasy-blue) 50%, var(--fantasy-violet) 100%);
+    color: #ffffff;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.fantasy-glow {
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.6), 0 0 40px rgba(168, 85, 247, 0.4);
+}
+
+.fantasy-border {
+  border: 2px solid rgba(212, 165, 116, 0.3);
+  box-shadow: 0 0 20px rgba(212, 165, 116, 0.2), inset 0 0 20px rgba(212, 165, 116, 0.1);
+}
+
+.glass-panel {
+  background: rgba(10, 22, 40, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 165, 116, 0.2);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
